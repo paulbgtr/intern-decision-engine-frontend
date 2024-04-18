@@ -21,6 +21,7 @@ This document summarizes the work completed under TICKET-101, including the deve
   - **Issue**: The interface didn't display the highest loan amount approved.
   - **Resolution**: The issue was identified and fixed by updating the display logic to accurately reflect the backend decision.
   - **Impact**: The fix improved the accuracy of the frontend display, ensuring users receive correct information about their loan status.
+    - **Additional Issue**: Even though the requirements set the minimal loan period as 12 months, the frontend showed 6 months as the minimum. This was fixed by updating the frontend code to reflect the correct minimum loan period.
 - **Unit Tests**: All unit tests passed successfully, confirming that the individual components function as designed. However, more edge cases could be added to ensure comprehensive coverage.
 - **Integration Tests**: Verified that the frontend and backend interact seamlessly. However, there are some issues:
   - The frontend does not display an error message when the backend is unavailable.
@@ -44,6 +45,11 @@ This document summarizes the work completed under TICKET-101, including the deve
 ## Additional Notes
 
 It's important to emphasize the nature of issues faced as integration challenges between the frontend and backend. Particularly, the recent fix involving the loan amount display logic was a crucial frontend integration issue. It revealed the need for better handling of data and error responses from the API, ensuring the frontend accurately reflects the backend's decisions and errors without misleading the user.
+
+## What Was Fixed
+
+1. Fix the logic of displaying the highest loan amount approved.
+2. Update the frontend to reflect the correct minimum loan period.
 
 ## Conclusion
 
